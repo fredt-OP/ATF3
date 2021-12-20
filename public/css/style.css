@@ -1,44 +1,51 @@
 /*exemples de variables*/
-/*$primary : #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$grey: #D3D3D3;
-$white: #FFF;
-$mint: #99e2d0;
-$green: #008766;*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-/*achanger*/
-body header {
+body {
+  font-family: 'freestyle-script-regular', sans-serif;
+  margin: 0;
+}
+
+body Header {
   width: 100%;
-}
-
-body header .portrait {
-  width: 100px;
-  height: 100px;
-}
-
-body header .portrait img {
-  width: 100%;
-}
-
-body header nav {
-  width: 100%;
-}
-
-body header nav ul {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 250px;
+  background: #2a5a8e;
+  background: linear-gradient(177deg, #2a5a8e 6%, white 100%);
 }
 
-body header nav ul li {
+body Header .title {
+  align-items: center;
+}
+
+body Header .title h1, body Header .title h2 {
   text-align: center;
-  padding: 0.3em;
-  width: 80px;
-  margin: 1em;
-  border: 2px solid green;
-  border-radius: 1em;
+  font-family: 'freestyle-script-regular', sans-serif;
+  color: #ABFF85;
+}
+
+body Header .navigation {
+  padding-bottom: 30px;
+}
+
+body Header .navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+body Header .navigation ul .boutonContact {
+  padding: 6px 20px;
+  text-decoration: none;
+  font-family: 'freestyle-script-regular', sans-serif;
+  font-weight: bold;
+  border: solid 2px #F2F2F2;
+  width: 90px;
+  height: 25px;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #2A5A8E;
 }
 /*# sourceMappingURL=style.css.map */

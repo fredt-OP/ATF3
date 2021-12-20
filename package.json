@@ -4,7 +4,7 @@
   "description": "Informatique",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss: ./public/css/style.css",
+    "sass": "sass --watch ./sass/style.scss: ./public/css/style.css",
     "prefix": "post.css ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {

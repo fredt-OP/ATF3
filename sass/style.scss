@@ -5,9 +5,56 @@
 @import "./Utils/animations.scss"; 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
-/*achanger*/
+
+
 
 
 body {
-    
+    font-family:'freestyle-script-regular', sans-serif;
+    margin:0;
+    Header {
+        .title {
+            align-items: center;
+            h1, h2 {
+                text-align: center;
+                font-family: 'freestyle-script-regular', sans-serif;
+                color: $primary;
+            }
+
+        }
+        width: 100%;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        min-height: 250px;
+        background: rgb(42,90,142);
+background: linear-gradient(177deg, rgba(42,90,142,1) 6%, rgba(255,255,255,1) 100%);
+        
+        .navigation {
+            padding-bottom: 30px;
+            
+            
+            
+            ul {
+                margin:0;
+                padding:0;
+                .boutonContact {
+                    
+                    padding: 6px 20px;
+                    text-decoration: none;
+                    font-family: 'freestyle-script-regular', sans-serif;
+                    font-weight: bold;
+                    border: solid 2px $grey;
+                    width: 90px;
+                    height: 25px;
+                    border-radius: 30px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: $secondary;
+                }
+            }
+        }
+
+    }
 }
