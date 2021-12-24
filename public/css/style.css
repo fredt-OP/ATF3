@@ -1,28 +1,112 @@
 /*exemples de variables*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@font-face {
+  font-family: 'Freestyle Script Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Freestyle Script Regular"), url("../../fonts/FREESCPT.woff") format("woff");
+}
+
 body {
-  font-family: 'freestyle-script-regular', sans-serif;
+  font-family: "Freestyle Script Regular";
   margin: 0;
 }
 
 body Header {
+  /*background-image: url(../../images/tacheFinale.PNG);
+        background-size: cover;*/
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 250px;
+  min-height: 260px;
+  max-height: 260px;
   background: #2a5a8e;
   background: linear-gradient(177deg, #2a5a8e 6%, white 100%);
+  padding: 0;
+  margin: 0;
 }
 
-body Header .headerLogo {
-  width: 90%;
-  max-width: 500px;
+body Header .headerImg {
+  width: 100%;
+  max-width: 450px;
+  height: 320px;
+  top: -30px;
+  position: relative;
+  /*object-fit: cover;*/
+}
+
+body Header H1 {
+  position: absolute;
+  top: 27px;
+  color: #ABFF85;
+  font-size: 90px;
+  margin: 0;
+}
+
+body Header H1 .orange {
+  color: #FF925C;
+}
+
+body Header h2 {
+  position: absolute;
+  top: 90px;
+  color: #ABFF85;
+  font-size: 80px;
+  margin: 0;
+}
+
+body Header .nav .nav-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: green;
+  height: 0px;
+  transition: all 0.3s ease-in;
+  overflow-y: hidden;
+  top: 150px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body Header .nav .nav-links a {
+  text-align: center;
+  margin: 0.5em;
+  cursor: pointer;
+  height: 20px;
+  border: 1px solid red;
+  border-radius: 0.5em;
+  background: #4b9422;
+  background: linear-gradient(9deg, #4b9422 45%, rgba(160, 220, 68, 0.451418) 100%);
+  color: #FFF;
+  padding: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 4px 8px 0px #00000020;
+}
+
+body Header .nav .nav-links a:hover {
+  color: #2A5A8E;
+  transform: scale(1.02);
+}
+
+body Header .nav > #nav-check:not(:checked) ~ .nav-links {
+  height: 0px;
+}
+
+body Header .nav > #nav-check:checked ~ .nav-links {
+  height: calc(105px - 50px);
+  overflow-y: auto;
 }
 
 body Header .navigation {
   padding-bottom: 30px;
+  top: 210px;
+  position: absolute;
 }
 
 body Header .navigation ul {
@@ -33,9 +117,9 @@ body Header .navigation ul {
 body Header .navigation ul .boutonContact {
   padding: 6px 20px;
   text-decoration: none;
-  font-family: 'freestyle-script-regular', sans-serif;
+  font-size: 25px;
   font-weight: bold;
-  border: solid 2px #F2F2F2;
+  border: solid 2px grey;
   width: 90px;
   height: 25px;
   border-radius: 30px;
@@ -45,6 +129,12 @@ body Header .navigation ul .boutonContact {
 }
 
 body main {
+  background-image: url(../../images/a-bright-window-lite-room-shows-a-home-office.jpg);
+  background-repeat: no-repeat;
+  /*background-position: fixed;*/
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,7 +248,7 @@ body main .search .cta:hover path.two {
     fill: #ABFF85;
   }
   100% {
-    fill: white;
+    fill: #FF925C;
   }
 }
 
@@ -176,5 +266,89 @@ body main .textWelcome .text1 {
   margin: 1em;
   width: 280px;
   color: #2A5A8E;
+}
+
+body footer .infos {
+  width: 100%;
+  background-color: #2A5A8E;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+
+body footer .infos a {
+  margin: 0 0.5em;
+  color: #ABFF85;
+}
+
+@media screen and (max-width: 700px) {
+  body header .nav input {
+    display: none;
+  }
+  body header .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+  body header .nav > .nav-btn > label {
+    display: inline-block;
+    width: 25px;
+    height: 50px;
+    padding: 15px;
+  }
+  body header .nav > .nav-btn > label:hover, body header .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body header .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #FF925C;
+  }
+  body header .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #2A5A8E;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 260px;
+    left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  body header .nav > .nav-links > a {
+    width: 150px;
+    text-align: center;
+    /*margin: 0.2em;*/
+    cursor: pointer;
+    border: 2px solid #FF925C;
+    border-radius: 1em;
+    background: #4b9422;
+    background: linear-gradient(9deg, #4b9422 45%, rgba(160, 220, 68, 0.451418) 100%);
+    color: #FFF;
+    font-size: 27px;
+    padding: 0.5em;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px 0px #00000020;
+  }
+  body header .nav > .nav-links > a:hover {
+    color: #2A5A8E;
+    transform: scale(1.02);
+  }
+  body header .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  body header .nav > #nav-check:checked ~ .nav-links {
+    height: calc(625px - 50px);
+    overflow-y: auto;
+  }
+  body main .search {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
