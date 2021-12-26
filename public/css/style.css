@@ -327,7 +327,7 @@ body footer .infos .droits a, body footer .infos .contact a, body footer .infos 
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid #ABFF85;
+    border-top: 3px solid #ABFF85;
   }
   body header .nav > .nav-links {
     position: absolute;
