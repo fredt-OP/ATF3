@@ -52,6 +52,10 @@ body Header h2 {
   margin: 0;
 }
 
+body Header .nav {
+  display: none;
+}
+
 body Header .nav .nav-links {
   position: absolute;
   display: block;
@@ -294,6 +298,9 @@ body footer .infos .droits a, body footer .infos .contact a, body footer .infos 
 }
 
 @media screen and (max-width: 732px) {
+  body header .nav {
+    display: block;
+  }
   body header .nav input {
     display: none;
   }

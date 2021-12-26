@@ -52,7 +52,8 @@ body {
             font-size: 80px;
             margin: 0;
         }
-        .nav {    
+        .nav {
+            display: none; 
             .nav-links {
                 position: absolute;
                 display: block;
@@ -288,6 +289,7 @@ body {
         
         header {
             .nav {
+                display: block;
                 input {
                     display:none;
                 }
