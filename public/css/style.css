@@ -36,6 +36,7 @@ body Header H1 {
   position: absolute;
   top: 27px;
   color: #ABFF85;
+  text-shadow: 3px 3px 2px black;
   font-size: 90px;
   margin: 0;
 }
@@ -48,6 +49,7 @@ body Header h2 {
   position: absolute;
   top: 90px;
   color: #ABFF85;
+  text-shadow: 3px 3px 2px black;
   font-size: 80px;
   margin: 0;
 }
@@ -292,9 +294,11 @@ body footer .infos .droits, body footer .infos .contact, body footer .infos .sir
 body footer .infos .droits a, body footer .infos .contact a, body footer .infos .siret a {
   text-decoration: none;
   margin: 0 1em;
-  color: #f2f2f2;
   font-size: 30px;
-  text-shadow: 3px 5px 2px #474747, 2px 2px 2px rgba(206, 89, 55, 0);
+  /*color: #f2f2f2;
+                    text-shadow: 3px 5px 2px #474747, 2px 2px 2px rgba(206,89,55,0);*/
+  color: #FFF;
+  text-shadow: 3px 3px 2px black;
 }
 
 @media screen and (max-width: 732px) {
