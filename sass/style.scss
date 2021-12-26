@@ -17,32 +17,25 @@ body {
     margin:0;
     
     Header {
-        /*background-image: url(../../images/tacheFinale.PNG);
-        background-size: cover;*/
         width: 100%;
         display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         min-height: 260px;
         max-height: 260px;
-        background: rgb(42,90,142);
-        background: linear-gradient(177deg, rgba(42,90,142,1) 6%, rgba(255,255,255,1) 100%);
         padding:0;
         margin:0;
-        
-
-        
+        background-color: $wall;
+        background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
         .headerImg {
             width: 100%;
             max-width: 450px;
-            height: 320px;
+            min-height: 300px;
             top : -30px;
             position: relative;
-            /*object-fit: cover;*/
         }
         H1 {
-            
             position: absolute;
             top : 27px;
             color: $primary;
@@ -53,21 +46,18 @@ body {
             }
         }
         h2 {
-            
             position: absolute;
             top: 90px;
             color: $primary;
             font-size: 80px;
             margin: 0;
         }
-        .nav { 
-                
+        .nav {    
             .nav-links {
                 position: absolute;
                 display: block;
                 width: 100%;
                 flex-wrap: wrap;
-                background-color: green;
                 height: 0px;
                 transition: all 0.3s ease-in;
                 overflow-y: hidden;
@@ -81,20 +71,18 @@ body {
                     text-align: center;
                     margin: 0.5em;
                     cursor: pointer;
-                        height: 20px;
-                        border: 1px solid red;
-                        border-radius: 0.5em;
-                        background: rgb(75,148,34);
-                        background: linear-gradient(9deg, rgba(75,148,34,1) 45%, rgba(160,220,68,0.4514180672268907) 100%);
-                        color: $white;
-                        padding: 0.5em;
-                        cursor: pointer;
-                        text-decoration: none;
-                        box-shadow: 0px 4px 8px 0px #00000020;
-                        &:hover {
+                    height: 20px;
+                    border: 1px solid red;
+                    border-radius: 0.5em;
+                    color: $white;
+                    padding: 0.5em;
+                    cursor: pointer;
+                    text-decoration: none;
+                    box-shadow: 0px 4px 8px 0px #00000020;
+                    &:hover {
                             color:$secondary;
                             transform: scale(1.02);
-                        }
+                    }
                 }      
             }
         }
@@ -104,37 +92,57 @@ body {
         .nav > #nav-check:checked ~ .nav-links {
                 height: calc(105px - 50px);
                 overflow-y: auto;
-        }
-         
+        } 
         .navigation {
             padding-bottom: 30px;   
             top: 210px;
             position: absolute;
-            ul {
+            .navList {
                 margin:0;
                 padding:0;
                 .boutonContact {
                     padding: 6px 20px;
                     text-decoration: none;
-                    font-size: 25px;
-                    font-weight: bold;
-                    border: solid 2px grey;
-                    width: 90px;
+                    font-size: 34px;
+                    width: 150px;
                     height: 25px;
-                    border-radius: 30px;
                     text-align: center;
-                    color: #fff;
-                    background-color: $secondary;
+                    color: $white;
+                }
+            }
+            .effetNeon {
+                text-align: center;
+                text-shadow:
+                    0 0 7px #fff,
+                    0 0 10px #fff,
+                    0 0 42px $tertiary,
+                    0 0 77px $tertiary,
+                    0 0 100px $tertiary;
+                animation: lumiere 1s infinite linear;
+            }
+            @keyframes lumiere {
+                0%{
+                    text-shadow:
+                    0 0 7px #fff,
+                    0 0 10px #fff,
+                    0 0 22px $tertiary,
+                    0 0 47px $tertiary,
+                    0 0 70px $tertiary;
+                }
+               50%{
+                    text-shadow:
+                    0 0 7px #fff,
+                    0 0 10px #fff,
+                    0 0 12px $tertiary,
+                    0 0 57px $tertiary,
+                    0 0 90px $tertiary;
                 }
             }
         }
     }
     main {
-        
         background-image: url(../../images/a-bright-window-lite-room-shows-a-home-office.jpg);
         background-repeat: no-repeat;
-        
-        /*background-position: fixed;*/
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -150,7 +158,6 @@ body {
             font-weight: bold;
             padding: 1em 0;
             border-top: 3px solid $grey;
-    
             .locationIcon, .locationTitle {
                 margin: 0 0.5em;
                 color: $secondary;
@@ -158,108 +165,87 @@ body {
         }
         .search {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            width:90%;
+            justify-content: space-evenly;
             padding:1em;
             .wrapper {
                 display: flex;
                 justify-content: space-around;
                 min-width: 150px;
-                margin:2em 3em 1.5em 3em;
-              }
-              
-              .cta {
-                  display: flex;
-                  align-items: center;
-                  padding: 0.5em 0.5em;
-                  text-decoration: none;
-                  
-                  font-size: 25px;
-                  color: white;
-                  background: $secondary;
-                  transition: 1s;
-                  box-shadow: 6px 6px 0 black;
-                  transform: skewX(-15deg);
-                  
-              }
-              
-              .cta:focus {
-                 outline: none; 
-              }
-              
-              .cta:hover {
-                  transition: 0.5s;
-                  box-shadow: 10px 10px 0 $primary;
-              }
-              
-              .cta span:nth-child(2) {
-                  transition: 0.5s;
-                  margin-right: 0px;
-              }
-              
-              .cta:hover  span:nth-child(2) {
-                  transition: 0.5s;
-                  margin-right: 45px;
-              }
-              
-                span {
-                  transform: skewX(15deg) 
-                }
-              
-                span:nth-child(2) {
-                  width: 20px;
-                  margin-left: 30px;
-                  position: relative;
-                  top: 12%;
-                }
+                margin:2em 1.5em 1.5em 1.5em;
+            }
+            .cta {
+                display: flex;
+                align-items: center;
+                padding: 0.5em 0.5em;
+                text-decoration: none; 
+                font-size: 25px;
+                color: white;
+                background: $secondary;
+                transition: 1s;
+                box-shadow: 6px 6px 0 black;
+                transform: skewX(-15deg);  
+            }
+            .cta:focus {
+                outline: none; 
+            }
+            .cta:hover {
+                transition: 0.5s;
+                box-shadow: 10px 10px 0 $primary;
+            }
+            .cta span:nth-child(2) {
+                transition: 0.5s;
+                margin-right: 0px;
+            }
+            .cta:hover  span:nth-child(2) {
+                transition: 0.5s;
+                margin-right: 45px;
+            }
+            span {
+                transform: skewX(15deg) 
+            }
+            span:nth-child(2) {
+                width: 20px;
+                margin-left: 30px;
+                position: relative;
+                top: 12%;
+            }
                 
-              /**************SVG****************/
+            /**************SVG****************/
               
-              path.one {
-                  transition: 0.4s;
-                  transform: translateX(-60%);
-              }
+            path.one {
+                transition: 0.4s;
+                transform: translateX(-60%);
+            }
+            path.two {
+                transition: 0.5s;
+                transform: translateX(-30%);
+            }
+            .cta:hover path.three {
+                animation: color_anim 1s infinite 0.2s;
+            }
+            .cta:hover path.one {
+                transform: translateX(0%);
+                animation: color_anim 1s infinite 0.6s;
+            }
+            .cta:hover path.two {
+                transform: translateX(0%);
+                animation: color_anim 1s infinite 0.4s;
+            }
               
-              path.two {
-                  transition: 0.5s;
-                  transform: translateX(-30%);
-              }
+            /* SVG animations */
               
-              .cta:hover path.three {
-                  animation: color_anim 1s infinite 0.2s;
-              }
-              
-              .cta:hover path.one {
-                  transform: translateX(0%);
-                  animation: color_anim 1s infinite 0.6s;
-              }
-              
-              .cta:hover path.two {
-                  transform: translateX(0%);
-                  animation: color_anim 1s infinite 0.4s;
-              }
-              
-              /* SVG animations */
-              
-              @keyframes color_anim {
-                  0% {
-                      fill: white;
-                  }
-                  50% {
-                      fill: $primary;
-                  }
-                  100% {
-                      fill: $tertiary;
-                  }
-              }
-            
-            
-
-            
+            @keyframes color_anim {
+                0% {
+                    fill: white;
+                }
+                50% {
+                    fill: $primary;
+                }
+                100% {
+                    fill: $tertiary;
+                }
+            }    
         }
-            
-        
         .textWelcome {
             border: 2px solid $grey;
             border-radius: 30px;
@@ -278,22 +264,27 @@ body {
     footer {
         .infos {
             width: 100%;
-            background-color: $secondary;
+            background-color: $wall;
+            background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
             display:flex;
-            justify-content: space-evenly;
+            flex-direction: column;
             align-items: center;
-            height: 100px;
-            a {
-                margin: 0 0.5em;
-                
-                    color: $primary;
-                    
-            
-
+            .droits, .contact, .siret {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                margin: 0.5em;
+                a {
+                    text-decoration: none;
+                    margin:0 1em;
+                    color: #f2f2f2;
+                    font-size: 30px;
+                    text-shadow: 3px 5px 2px #474747, 2px 2px 2px rgba(206,89,55,0);
+                }
             }
         }
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 732px) {
         
         header {
             .nav {
@@ -320,13 +311,14 @@ body {
                 display: block;
                 width: 25px;
                 height: 10px;
-                border-top: 2px solid $tertiary;
+                border-top: 2px solid $primary;
             }
             .nav > .nav-links {
                 position: absolute;
                 display: block;
                 width: 100%;
-                background-color: $secondary;
+                background-color: $wall;
+                background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
                 height: 0px;
                 transition: all 0.3s ease-in;
                 overflow-y: hidden;
@@ -338,14 +330,16 @@ body {
             }
             .nav > .nav-links > a {
                 width: 150px;
+                height: 25px;
                 text-align: center;
-                /*margin: 0.2em;*/
                 cursor: pointer;
-                border: 2px solid $tertiary;
-                border-radius: 1em;
-                background: rgb(75,148,34);
-                background: linear-gradient(9deg, rgba(75,148,34,1) 45%, rgba(160,220,68,0.4514180672268907) 100%);
-                color: $white;
+                border: 0.01px solid $secondary;
+                border-radius: 0.4em;
+                background:conic-gradient(#d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+								#d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+								#d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+								#d7d7d7, #c3c3c3, #cccccc, #c6c6c6);
+                color: $secondary;
                 font-size: 27px;
                 padding: 0.5em;
                 text-decoration: none;
@@ -353,8 +347,7 @@ body {
                 &:hover {
                     color:$secondary;
                     transform: scale(1.02);
-                }
-                
+                }   
             }
             .nav > #nav-check:not(:checked) ~ .nav-links {
                 height: 0px;
