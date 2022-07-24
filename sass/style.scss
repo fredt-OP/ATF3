@@ -21,12 +21,15 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        min-height: 260px;
-        max-height: 260px;
+        min-height: 220px;
+        max-height: 220px;
         padding:0;
         margin:0;
-        background-color: $wall;
-        background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+        //background-color: #5d7ad1;
+        background-image: url(../../images/fond_header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
         .headerImg {
             width: 100%;
             min-width: 360px;
@@ -38,7 +41,7 @@ body {
         }
         H1 {
             position: absolute;
-            top : 27px;
+            top : 8px;
             color: $primary;
             text-shadow: 3px 3px 2px black;
             font-size: 90px;
@@ -49,11 +52,12 @@ body {
         }
         h2 {
             position: absolute;
-            top: 90px;
+            top: 71px;
             color: $primary;
             text-shadow: 3px 3px 2px black;
             font-size: 80px;
             margin: 0;
+            
         }
         .nav {
             display: none;
@@ -99,7 +103,8 @@ body {
         } 
         .navigation {
             padding-bottom: 30px;   
-            top: 210px;
+            top: 170px;
+            //right: 20px;
             position: absolute;
             .navList {
                 margin:0;
@@ -145,7 +150,9 @@ body {
         }
     }
     main {
-        background-image: url(../../images/a-bright-window-lite-room-shows-a-home-office.jpg);
+        //background-color: #f2f2f2;
+        //background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+        background-image: url(../../images/chats-en-teletravail-vacances-palmier.webp);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -268,137 +275,257 @@ body {
             align-items: center;
             margin: 2em;
             background-color: #f2f2f2;
-            background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+            //background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
             .text1 {
                 font-style: italic;
-                font-size: 25px;
+                font-size: 30px;
                 font-weight: bold;
                 margin: 1em;
-                width: 280px;
-                color: #293241;
+                width: 330px;
+                color: #14213d;
             }
         }
-        .EspaceParticuliers {
-            width: 90%;
-            border: 2px solid $grey;
-            border-radius: 30px;
-            margin: 0.7em;
-            display:flex;
-            .TitleEspaceParticuliers {
-                width:30%;
-                background-color: $white;
-                border-radius: 30px;
-                margin:0.5em;
-                display : flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                .TitlePartculiers {
-                    font-size: 33px;
-                    margin: 0.2em;
-                }
+//caroussel
+.carou {
+    height: 450px;
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 50px auto 0 auto;
+    perspective: 1000px;
+    .carousel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d; 
+      animation: rotate360 60s infinite forwards linear;
+      .carousel__face { 
+        position: absolute;
+        width: 300px;
+        height: 187px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: cover;
+        box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+        display: flex;
+        span {
+          margin: auto;
+          font-size: 2rem;
+        }
+    }
+    .carousel__face:nth-child(1) {
+      background-image: url(../../images/formateur.jpg);
+      transform: rotateY(  0deg) translateZ(430px); }
+    .carousel__face:nth-child(2) { 
+      background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY( 40deg) translateZ(430px); }
+    .carousel__face:nth-child(3) {
+      background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY( 80deg) translateZ(430px); }
+    .carousel__face:nth-child(4) {
+      background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY(120deg) translateZ(430px); }
+    .carousel__face:nth-child(5) { 
+      background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     transform: rotateY(160deg) translateZ(430px); }
+    .carousel__face:nth-child(6) { 
+      background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     transform: rotateY(200deg) translateZ(430px); }
+    .carousel__face:nth-child(7) { 
+      background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     transform: rotateY(240deg) translateZ(430px); }
+    .carousel__face:nth-child(8) {
+      background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY(280deg) translateZ(430px); }
+    .carousel__face:nth-child(9) {
+      background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY(320deg) translateZ(430px); }
+    
+    
+    
+        @keyframes rotate360 {
+            from {
+            transform: rotateY(0deg);
             }
-            .TextEspaceParticuliers {
-                width:70%;
-                background-color: $grey;
-                border-radius: 30px;
-                margin:0.5em;
-                .TextParticuliers {
-                    font-size: 33px;
-                    margin: 0.2em;
-                }
+            to {
+        transform: rotateY(-360deg);
             }
         }
-        .EspaceAutoEntreprises {
-            width: 90%;
-            border: 2px solid $grey;
-            border-radius: 30px;
-            margin: 0.7em;
-            display:flex;
-            .TitleEspaceAutoEntreprises {
-                width:30%;
-                background-color: $white;
-                border-radius: 30px;
-                margin:0.5em;
-                display : flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                .TitleAutoEntreprises {
-                    font-size: 33px;
-                    margin: 0.2em;
-                }
-            }
-            .TextEspaceAutoEntreprises {
-                width:70%;
-                background-color: $grey;
-                border-radius: 30px;
-                margin:0.5em;
-                .TextAutoEntreprises {
-                    font-size: 33px;
-                    margin: 0.2em;
-                }
-            }
         }
-        .EspaceSiteWeb {
-            width: 90%;
-            border: 2px solid $grey;
-            border-radius: 30px;
-            margin: 0.7em;
+    }
+  }
+  
+  
+  
+  
+
+
+        .blockDescription {
             display:flex;
-            .TitleEspaceSiteWeb {
-                width:30%;
-                background-color: $white;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .EspaceParticuliers {
+                width: 350px;
+                border: 2px solid $grey;
                 border-radius: 30px;
-                margin:0.5em;
-                display : flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                .TitleSiteWeb {
-                    font-size: 33px;
-                    margin: 0.2em;
+                margin: 0.7em;
+                display:flex;
+                flex-direction: column;
+                .TitleEspaceParticuliers {
+                    width:90%;
+                    background:conic-gradient(#d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+                                    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+                                    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+                                    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6);
+                    
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .TitlePartculiers {
+                        font-size: 33px;
+                        margin: 0.2em;
+                    }
+                }
+                .TextEspaceParticuliers {
+                    width:90%;
+                    background-color: #d6c3b2;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    .TextParticuliers {
+                        font-size: 33px;
+                        margin: 0.7em;
+                    }
                 }
             }
-            .TextEspaceSiteWeb {
-                width:70%;
-                background-color: $grey;
+            .EspaceAutoEntreprises {
+                width: 350px;
+                border: 2px solid $grey;
                 border-radius: 30px;
-                margin:0.5em;
-                .TextSiteWeb {
-                    font-size: 33px;
-                    margin: 0.2em;
+                margin: 0.7em;
+                display:flex;
+                flex-direction: column;
+                .TitleEspaceAutoEntreprises {
+                    width:90%;
+                    background:conic-gradient(#d95641, #b14439, #b2453a, #d25645, 
+                                    #d95641, #b14439, #b2453a, #d25645,
+                                    #d95641, #b14439, #b2453a, #d25645,
+                                    #d95641, #b14439, #b2453a, #d25645);
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .TitleAutoEntreprises {
+                        font-size: 33px;
+                        margin: 0.2em;
+                    }
+                }
+                .TextEspaceAutoEntreprises {
+                    width:90%;
+                    background-color: #d6c3b2;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    .TextAutoEntreprises {
+                        font-size: 33px;
+                        margin: 0.7em;
+                    }
                 }
             }
-        }
-        .EspaceFormations {
-            width: 90%;
-            border: 2px solid $grey;
-            border-radius: 30px;
-            margin: 0.7em;
-            display:flex;
-            .TitleEspaceFormations {
-                width:30%;
-                background-color: $white;
+            .EspaceSiteWeb {
+                width: 350px;
+                border: 2px solid $grey;
                 border-radius: 30px;
-                margin:0.5em;
-                display : flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                .TitleFormations {
-                    font-size: 33px;
-                    margin: 0.2em;
+                margin: 0.7em;
+                display:flex;
+                flex-direction: column;
+                .TitleEspaceSiteWeb {
+                    width:90%;
+                    background:conic-gradient(#edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800);
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .TitleSiteWeb {
+                        font-size: 33px;
+                        margin: 0.2em;
+                    }
+                }
+                .TextEspaceSiteWeb {
+                    width:90%;
+                    background-color: #d6c3b2;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    .TextSiteWeb {
+                        font-size: 33px;
+                        margin: 0.7em;
+                    }
                 }
             }
-            .TextEspaceFormations {
-                width:70%;
-                background-color: $grey;
+            .EspaceFormations {
+                width: 350px;
+                border: 2px solid $grey;
                 border-radius: 30px;
-                margin:0.5em;
-                .TextFormations {
-                    font-size: 33px;
-                    margin: 0.2em;
+                margin: 0.7em;
+                display:flex;
+                flex-direction: column;
+                .TitleEspaceFormations {
+                    width:90%;
+                    background:conic-gradient(#e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab);
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .TitleFormations {
+                        font-size: 33px;
+                        margin: 0.2em;
+                    }
+                }
+                .TextEspaceFormations {
+                    width:90%;
+                    background-color: #d6c3b2;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    
+                    border-radius: 30px;
+                    margin:0.5em;
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    .TextFormations {
+                        font-size: 33px;
+                        margin: 0.7em;
+                    }
                 }
             }
         }
@@ -505,6 +632,9 @@ body {
         main{
             .search {
                 display:none; 
+            }
+            .carou {
+                display: none;
             } 
             .EspaceParticuliers {
                 flex-direction: column;
