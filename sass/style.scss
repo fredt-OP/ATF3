@@ -4,7 +4,6 @@
 @import "./Utils/mixins";
 @import "./Utils/animations.scss"; 
 
-
 @font-face {
     font-family: 'Freestyle Script Regular';
     font-style: normal;
@@ -33,7 +32,7 @@ body {
             min-width: 360px;
             max-width: 360px;
             min-height: 190px;
-            top : 10px;
+            top : 16px;
             margin:0;
             position: relative;
         }
@@ -156,16 +155,26 @@ body {
         align-items: center;
         .location {
             display:flex;
-            justify-content: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            //flex-direction: column-reverse;
+            //raw-content: center;
             background-color: $grey;
             background: rgba($grey, 0.5);
-            width: 100%;
+            //width: 100%;
             font-weight: bold;
-            padding: 1em 0;
+            width: 100%;
+            //max-height: 2.3em;
+            padding: 0.5em 0;
             border-top: 3px solid $grey;
-            .locationIcon, .locationTitle {
+            .locationIcon, .locationTitle, .Denomination {
+                
                 margin: 0 0.5em;
                 color: $secondary;
+                display:flex;
+                align-items: center;
+                font-size: 30px;
+                max-height: 2em;;
             }
         }
         .search {
@@ -257,19 +266,147 @@ body {
             display:flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 2em;
+            margin: 2em;
+            background-color: #f2f2f2;
+            background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
             .text1 {
                 font-style: italic;
+                font-size: 25px;
+                font-weight: bold;
                 margin: 1em;
                 width: 280px;
-                color: $secondary;
+                color: #293241;
+            }
+        }
+        .EspaceParticuliers {
+            width: 90%;
+            border: 2px solid $grey;
+            border-radius: 30px;
+            margin: 0.7em;
+            display:flex;
+            .TitleEspaceParticuliers {
+                width:30%;
+                background-color: $white;
+                border-radius: 30px;
+                margin:0.5em;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .TitlePartculiers {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+            .TextEspaceParticuliers {
+                width:70%;
+                background-color: $grey;
+                border-radius: 30px;
+                margin:0.5em;
+                .TextParticuliers {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+        }
+        .EspaceAutoEntreprises {
+            width: 90%;
+            border: 2px solid $grey;
+            border-radius: 30px;
+            margin: 0.7em;
+            display:flex;
+            .TitleEspaceAutoEntreprises {
+                width:30%;
+                background-color: $white;
+                border-radius: 30px;
+                margin:0.5em;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .TitleAutoEntreprises {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+            .TextEspaceAutoEntreprises {
+                width:70%;
+                background-color: $grey;
+                border-radius: 30px;
+                margin:0.5em;
+                .TextAutoEntreprises {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+        }
+        .EspaceSiteWeb {
+            width: 90%;
+            border: 2px solid $grey;
+            border-radius: 30px;
+            margin: 0.7em;
+            display:flex;
+            .TitleEspaceSiteWeb {
+                width:30%;
+                background-color: $white;
+                border-radius: 30px;
+                margin:0.5em;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .TitleSiteWeb {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+            .TextEspaceSiteWeb {
+                width:70%;
+                background-color: $grey;
+                border-radius: 30px;
+                margin:0.5em;
+                .TextSiteWeb {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+        }
+        .EspaceFormations {
+            width: 90%;
+            border: 2px solid $grey;
+            border-radius: 30px;
+            margin: 0.7em;
+            display:flex;
+            .TitleEspaceFormations {
+                width:30%;
+                background-color: $white;
+                border-radius: 30px;
+                margin:0.5em;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .TitleFormations {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
+            }
+            .TextEspaceFormations {
+                width:70%;
+                background-color: $grey;
+                border-radius: 30px;
+                margin:0.5em;
+                .TextFormations {
+                    font-size: 33px;
+                    margin: 0.2em;
+                }
             }
         }
     }
     footer {
         .infos {
             width: 100%;
-            background-color: $wall;
+            background-color: #272932;
             background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
             display:flex;
             flex-direction: column;
@@ -368,7 +505,31 @@ body {
         main{
             .search {
                 display:none; 
-    }    
+            } 
+            .EspaceParticuliers {
+                flex-direction: column;
+                .TitleEspaceParticuliers, .TextEspaceParticuliers {
+                    width: 100%;
+                }
+            }
+            .EspaceAutoEntreprises {
+                flex-direction: column;
+                .TitleEspaceAutoEntreprises, .TextEspaceAutoEntreprises {
+                    width: 100%;
+                }
+            }
+            .EspaceSiteWeb {
+                flex-direction: column;
+                .TitleEspaceSiteWeb, .TextEspaceSiteWeb {
+                    width: 100%;
+                }
+            }
+            .EspaceFormations {
+                flex-direction: column;
+                .TitleEspaceFormations, .TextEspaceFormations {
+                    width: 100%;
+                }
+            }   
         }
     }
 }

@@ -112,7 +112,16 @@ body Header .navigation .navList .boutonContact {
 body Header .navigation .effetNeon {
   text-align: center;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #FF925C, 0 0 77px #FF925C, 0 0 100px #FF925C;
-  animation: lumiere 1s infinite linear;
+  -webkit-animation: lumiere 1s infinite linear;
+          animation: lumiere 1s infinite linear;
+}
+@-webkit-keyframes lumiere {
+  0% {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 22px #FF925C, 0 0 47px #FF925C, 0 0 70px #FF925C;
+  }
+  50% {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 12px #FF925C, 0 0 57px #FF925C, 0 0 90px #FF925C;
+  }
 }
 @keyframes lumiere {
   0% {
@@ -123,7 +132,7 @@ body Header .navigation .effetNeon {
   }
 }
 body main {
-  background-image: url(../../images/a-bright-window-lite-room-shows-a-home-office.jpg);
+  background-image: url(../images/a-bright-window-lite-room-shows-a-home-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -134,22 +143,17 @@ body main {
 }
 body main .location {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: center;
   background-color: #F2F2F2;
   background: rgba(242, 242, 242, 0.5);
-  font-weight: bold;
   width: 100%;
-  padding: 0.5em 0;
+  font-weight: bold;
+  padding: 1em 0;
   border-top: 3px solid #F2F2F2;
 }
-body main .location .locationIcon, body main .location .locationTitle, body main .location .Denomination {
+body main .location .locationIcon, body main .location .locationTitle {
   margin: 0 0.5em;
   color: #2A5A8E;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  max-height: 2em;
 }
 body main .search {
   display: flex;
@@ -209,15 +213,29 @@ body main .search path.two {
   transform: translateX(-30%);
 }
 body main .search .cta:hover path.three {
-  animation: color_anim 1s infinite 0.2s;
+  -webkit-animation: color_anim 1s infinite 0.2s;
+          animation: color_anim 1s infinite 0.2s;
 }
 body main .search .cta:hover path.one {
   transform: translateX(0%);
-  animation: color_anim 1s infinite 0.6s;
+  -webkit-animation: color_anim 1s infinite 0.6s;
+          animation: color_anim 1s infinite 0.6s;
 }
 body main .search .cta:hover path.two {
   transform: translateX(0%);
-  animation: color_anim 1s infinite 0.4s;
+  -webkit-animation: color_anim 1s infinite 0.4s;
+          animation: color_anim 1s infinite 0.4s;
+}
+@-webkit-keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #ABFF85;
+  }
+  100% {
+    fill: #FF925C;
+  }
 }
 @keyframes color_anim {
   0% {
@@ -236,145 +254,17 @@ body main .textWelcome {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em;
-  background-color: #f2f2f2;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+  margin-top: 2em;
 }
 body main .textWelcome .text1 {
   font-style: italic;
-  font-size: 25px;
-  font-weight: bold;
   margin: 1em;
   width: 280px;
-  color: #293241;
-}
-body main .EspaceParticuliers {
-  width: 90%;
-  border: 2px solid #F2F2F2;
-  border-radius: 30px;
-  margin: 0.7em;
-  display: flex;
-}
-body main .EspaceParticuliers .TitleEspaceParticuliers {
-  width: 30%;
-  background-color: #FFF;
-  border-radius: 30px;
-  margin: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-body main .EspaceParticuliers .TitleEspaceParticuliers .TitlePartculiers {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceParticuliers .TextEspaceParticuliers {
-  width: 70%;
-  background-color: #F2F2F2;
-  border-radius: 30px;
-  margin: 0.5em;
-}
-body main .EspaceParticuliers .TextEspaceParticuliers .TextParticuliers {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceAutoEntreprises {
-  width: 90%;
-  border: 2px solid #F2F2F2;
-  border-radius: 30px;
-  margin: 0.7em;
-  display: flex;
-}
-body main .EspaceAutoEntreprises .TitleEspaceAutoEntreprises {
-  width: 30%;
-  background-color: #FFF;
-  border-radius: 30px;
-  margin: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-body main .EspaceAutoEntreprises .TitleEspaceAutoEntreprises .TitleAutoEntreprises {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceAutoEntreprises .TextEspaceAutoEntreprises {
-  width: 70%;
-  background-color: #F2F2F2;
-  border-radius: 30px;
-  margin: 0.5em;
-}
-body main .EspaceAutoEntreprises .TextEspaceAutoEntreprises .TextAutoEntreprises {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceSiteWeb {
-  width: 90%;
-  border: 2px solid #F2F2F2;
-  border-radius: 30px;
-  margin: 0.7em;
-  display: flex;
-}
-body main .EspaceSiteWeb .TitleEspaceSiteWeb {
-  width: 30%;
-  background-color: #FFF;
-  border-radius: 30px;
-  margin: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-body main .EspaceSiteWeb .TitleEspaceSiteWeb .TitleSiteWeb {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceSiteWeb .TextEspaceSiteWeb {
-  width: 70%;
-  background-color: #F2F2F2;
-  border-radius: 30px;
-  margin: 0.5em;
-}
-body main .EspaceSiteWeb .TextEspaceSiteWeb .TextSiteWeb {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceFormations {
-  width: 90%;
-  border: 2px solid #F2F2F2;
-  border-radius: 30px;
-  margin: 0.7em;
-  display: flex;
-}
-body main .EspaceFormations .TitleEspaceFormations {
-  width: 30%;
-  background-color: #FFF;
-  border-radius: 30px;
-  margin: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-body main .EspaceFormations .TitleEspaceFormations .TitleFormations {
-  font-size: 33px;
-  margin: 0.2em;
-}
-body main .EspaceFormations .TextEspaceFormations {
-  width: 70%;
-  background-color: #F2F2F2;
-  border-radius: 30px;
-  margin: 0.5em;
-}
-body main .EspaceFormations .TextEspaceFormations .TextFormations {
-  font-size: 33px;
-  margin: 0.2em;
+  color: #2A5A8E;
 }
 body footer .infos {
   width: 100%;
-  background-color: #272932;
+  background-color: #f2f2f2;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   display: flex;
   flex-direction: column;
@@ -465,29 +355,5 @@ body footer .infos .droits a, body footer .infos .contact a, body footer .infos 
   }
   body main .search {
     display: none;
-  }
-  body main .EspaceParticuliers {
-    flex-direction: column;
-  }
-  body main .EspaceParticuliers .TitleEspaceParticuliers, body main .EspaceParticuliers .TextEspaceParticuliers {
-    width: 100%;
-  }
-  body main .EspaceAutoEntreprises {
-    flex-direction: column;
-  }
-  body main .EspaceAutoEntreprises .TitleEspaceAutoEntreprises, body main .EspaceAutoEntreprises .TextEspaceAutoEntreprises {
-    width: 100%;
-  }
-  body main .EspaceSiteWeb {
-    flex-direction: column;
-  }
-  body main .EspaceSiteWeb .TitleEspaceSiteWeb, body main .EspaceSiteWeb .TextEspaceSiteWeb {
-    width: 100%;
-  }
-  body main .EspaceFormations {
-    flex-direction: column;
-  }
-  body main .EspaceFormations .TitleEspaceFormations, body main .EspaceFormations .TextEspaceFormations {
-    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
